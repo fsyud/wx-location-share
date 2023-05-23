@@ -1,2 +1,2 @@
-# uni-location-share
+# wx-location-share
 uni-location-share
