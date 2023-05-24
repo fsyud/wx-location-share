@@ -63,15 +63,18 @@ devDependencies:
   '@dcloudio/vite-plugin-uni':
     specifier: 3.0.0-alpha-3070720230316001
     version: 3.0.0-alpha-3070720230316001(postcss@8.4.23)(vite@4.0.4)(vue@3.2.45)
+  '@types/node':
+    specifier: ^20.2.3
+    version: 20.2.3
   '@vue/tsconfig':
     specifier: ^0.1.3
-    version: 0.1.3
+    version: 0.1.3(@types/node@20.2.3)
   typescript:
     specifier: ^4.9.4
     version: 4.9.4
   vite:
     specifier: 4.0.4
-    version: 4.0.4(terser@5.17.6)
+    version: 4.0.4(@types/node@20.2.3)(terser@5.17.6)
   vue-tsc:
     specifier: ^1.0.24
     version: 1.0.24(typescript@4.9.4)
@@ -1756,7 +1759,7 @@ packages:
       magic-string: 0.27.0
       picocolors: 1.0.0
       terser: 5.17.6
-      vite: 4.0.4(terser@5.17.6)
+      vite: 4.0.4(@types/node@20.2.3)(terser@5.17.6)
     transitivePeerDependencies:
       - postcss
       - supports-color
@@ -2730,7 +2733,6 @@ packages:
 
   /@types/node@20.2.3:
     resolution: {integrity: sha512-pg9d0yC4rVNWQzX8U7xb4olIOFuuVL9za3bzMT2pu2SU0SNEi66i2qrvhE2qt0HvkhuCaWJu7pLNOt/Pj8BIrw==}
-    dev: true
 
   /@types/prettier@2.7.2:
     resolution: {integrity: sha512-KufADq8uQqo1pYKVIYzfKbJfBAc0sOeXqGbFaSpv8MRmC/zXgowNZmFcbngndGk922QDmOASEXUZCaY48gs4cg==}
@@ -2765,7 +2767,7 @@ packages:
       regenerator-runtime: 0.13.11
       systemjs: 6.14.1
       terser: 5.17.6
-      vite: 4.0.4(terser@5.17.6)
+      vite: 4.0.4(@types/node@20.2.3)(terser@5.17.6)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2780,7 +2782,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/plugin-transform-typescript': 7.21.3(@babel/core@7.21.8)
       '@vue/babel-plugin-jsx': 1.1.1(@babel/core@7.21.8)
-      vite: 4.0.4(terser@5.17.6)
+      vite: 4.0.4(@types/node@20.2.3)(terser@5.17.6)
       vue: 3.2.45
     transitivePeerDependencies:
       - supports-color
@@ -2793,7 +2795,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.0.4(terser@5.17.6)
+      vite: 4.0.4(@types/node@20.2.3)(terser@5.17.6)
       vue: 3.2.45
 
   /@volar/language-core@1.0.24:
@@ -3046,13 +3048,15 @@ packages:
     resolution: {integrity: sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==}
     dev: true
 
-  /@vue/tsconfig@0.1.3:
+  /@vue/tsconfig@0.1.3(@types/node@20.2.3):
     resolution: {integrity: sha512-kQVsh8yyWPvHpb8gIc9l/HIDiiVUy1amynLNpCy8p+FoCiZXCo6fQos5/097MmnNZc9AtseDsCrfkhqCrJ8Olg==}
     peerDependencies:
       '@types/node': '*'
     peerDependenciesMeta:
       '@types/node':
         optional: true
+    dependencies:
+      '@types/node': 20.2.3
     dev: true
 
   /abab@2.0.6:
@@ -6035,7 +6039,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vite@4.0.4(terser@5.17.6):
+  /vite@4.0.4(@types/node@20.2.3)(terser@5.17.6):
     resolution: {integrity: sha512-xevPU7M8FU0i/80DMR+YhgrzR5KS2ORy1B4xcX/cXLsvnUWvfHuqMmVU6N0YiJ4JWGRJJsLCgjEzKjG9/GKoSw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -6060,6 +6064,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 20.2.3
       esbuild: 0.16.17
       postcss: 8.4.23
       resolve: 1.22.2
