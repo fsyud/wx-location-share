@@ -1,19 +1,18 @@
 <template>
   <view class="content">
-    <image class="logo" src="/static/logo.png" />
+    <!-- <image class="logo" src="/static/logo.png" /> -->
     <view class="text-area">
       <text class="title">{{ title }}</text>
     </view>
     <view>
       map box
-      <TMap />
     </view>
   </view>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import TMap from './MapTX.vue';
+// import TMap from './MapTX.vue'; // h5 map
 
 const title = ref('location share')
 
